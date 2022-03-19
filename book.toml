@@ -1,0 +1,6 @@
+[book]
+authors = ["Syrac organization"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Syrac"
