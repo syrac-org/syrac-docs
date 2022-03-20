@@ -2,6 +2,9 @@
 
 set -euo pipefail
 
+# Sort without putting capitalized words first
+export LC_ALL=en_US.UTF-8
+
 if [ "$#" -ne 2 ]; then
     echo "Invalid arguments"
     echo "Usage: $0 SOURCE_DIR DICTIONNARY_DIR"
