@@ -11,9 +11,8 @@ fi
 SOURCE_DIR=$1
 DICTIONNARY_DIR=$2
 
-for f in "$SOURCE_DIR"/*/*.md; do
+for lang_dir in "$SOURCE_DIR"/*; do
     # Check that dictionnary exists for given language
-    lang_dir=$(dirname "$f")
     lang=$(basename "$lang_dir")
     lang_dict="$DICTIONNARY_DIR/.aspell.$lang.pws"
     if [ ! -f "$lang_dict" ]; then
@@ -21,15 +20,24 @@ for f in "$SOURCE_DIR"/*/*.md; do
         exit 1
     fi
 
-    # Check spelling
-    echo -n "$f: "
-    if ! errors=$(aspell list --lang="$lang" --home-dir="$DICTIONNARY_DIR" < "$f"); then
-        echo "error running aspell"
-        exit 1
-    elif [ -n "$errors" ]; then
-        echo "epelling errors found"
-        echo "$errors" | sort --unique
+    # Check that dictionnary is sorted
+    if ! diff "$lang_dict" <((read -r; echo "$REPLY" ; sort) < "$lang_dict"); then
+        echo "Dictionnary $lang_dict is not sorted"
         exit 1
     fi
-    echo "OK"
+
+    # Check spelling
+    echo "Checking spelling for '$lang' directory"
+    for f in "$lang_dir"/*.md; do
+        echo -n "$f: "
+        if ! errors=$(aspell list --lang="$lang" --home-dir="$DICTIONNARY_DIR" < "$f"); then
+            echo "error running aspell"
+            exit 1
+            elif [ -n "$errors" ]; then
+            echo "epelling errors found"
+            echo "$errors" | sort --unique
+            exit 1
+        fi
+        echo "OK"
+    done
 done
