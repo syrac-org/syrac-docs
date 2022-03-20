@@ -1,0 +1,46 @@
+#!/bin/bash
+
+set -euo pipefail
+
+# Sort without putting capitalized words first
+export LC_ALL=en_US.UTF-8
+
+if [ "$#" -ne 2 ]; then
+    echo "Invalid arguments"
+    echo "Usage: $0 SOURCE_DIR DICTIONNARY_DIR"
+    exit 1
+fi
+
+SOURCE_DIR=$1
+DICTIONNARY_DIR=$2
+
+for lang_dir in "$SOURCE_DIR"/*; do
+    # Check that dictionnary exists for given language
+    lang=$(basename "$lang_dir")
+    lang_dict="$DICTIONNARY_DIR/.aspell.$lang.pws"
+    if [ ! -f "$lang_dict" ]; then
+        echo "Missing dictionnary for language $lang"
+        exit 1
+    fi
+
+    # Check that dictionnary is sorted
+    if ! diff "$lang_dict" <((read -r; echo "$REPLY" ; sort) < "$lang_dict"); then
+        echo "Dictionnary $lang_dict is not sorted"
+        exit 1
+    fi
+
+    # Check spelling
+    echo "Checking spelling for '$lang' directory"
+    for f in "$lang_dir"/*.md; do
+        echo -n "$f: "
+        if ! errors=$(aspell list --lang="$lang" --home-dir="$DICTIONNARY_DIR" < "$f"); then
+            echo "error running aspell"
+            exit 1
+            elif [ -n "$errors" ]; then
+            echo "epelling errors found"
+            echo "$errors" | sort --unique
+            exit 1
+        fi
+        echo "OK"
+    done
+done

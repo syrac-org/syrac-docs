@@ -13,7 +13,16 @@ jobs:
       - name: Retrieve source code
         uses: actions/checkout@v2
 
-      - name: Setup mdBook
+      - name: Run pre-commit
+        uses: pre-commit/action@v2.0.3
+
+      - name: Install aspell
+        run: sudo apt-get install -y aspell aspell-en
+
+      - name: Check spelling
+        run: scripts/spellcheck src scripts/dictionnaries
+
+      - name: Setup mdbook
         uses: peaceiris/actions-mdbook@v1
         with:
           mdbook-version: '0.4.15'
