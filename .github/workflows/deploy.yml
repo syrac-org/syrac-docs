@@ -20,7 +20,7 @@ jobs:
         run: sudo apt-get install -y aspell aspell-en
 
       - name: Check spelling
-        run: scripts/spellcheck src scripts/dictionnaries
+        run: make lint
 
       - name: Setup mdbook
         uses: peaceiris/actions-mdbook@v1
@@ -28,7 +28,7 @@ jobs:
           mdbook-version: '0.4.15'
 
       - name: Build book
-        run: mdbook build
+        run: make build
 
       - name: Deploy book
         uses: peaceiris/actions-gh-pages@v3
