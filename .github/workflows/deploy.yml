@@ -16,6 +16,9 @@ jobs:
       - name: Run pre-commit
         uses: pre-commit/action@v2.0.3
 
+      - name: Check spelling
+        run: scripts/spellcheck src scripts/dictionnaries
+
       - name: Setup mdBook
         uses: peaceiris/actions-mdbook@v1
         with:

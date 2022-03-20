@@ -1,0 +1,35 @@
+#!/bin/bash
+
+set -euo pipefail
+
+if [ "$#" -ne 2 ]; then
+    echo "Invalid arguments"
+    echo "Usage: $0 SOURCE_DIR DICTIONNARY_DIR"
+    exit 1
+fi
+
+SOURCE_DIR=$1
+DICTIONNARY_DIR=$2
+
+for f in "$SOURCE_DIR"/*/*.md; do
+    # Check that dictionnary exists for given language
+    lang_dir=$(dirname "$f")
+    lang=$(basename "$lang_dir")
+    lang_dict="$DICTIONNARY_DIR/.aspell.$lang.pws"
+    if [ ! -f "$lang_dict" ]; then
+        echo "Missing dictionnary for language $lang"
+        exit 1
+    fi
+
+    # Check spelling
+    echo -n "$f: "
+    if ! errors=$(aspell list --lang="$lang" --home-dir="$DICTIONNARY_DIR" < "$f"); then
+        echo "error running aspell"
+        exit 1
+    elif [ -n "$errors" ]; then
+        echo "epelling errors found"
+        echo "$errors" | sort --unique
+        exit 1
+    fi
+    echo "OK"
+done
