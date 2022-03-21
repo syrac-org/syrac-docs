@@ -37,7 +37,7 @@ for lang_dir in "$SOURCE_DIR"/*; do
             echo "error running aspell"
             exit 1
             elif [ -n "$errors" ]; then
-            echo "epelling errors found"
+            echo "spelling errors found"
             echo "$errors" | sort --unique
             exit 1
         fi
