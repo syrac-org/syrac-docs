@@ -4,7 +4,7 @@ Paragliding competitions are incredible events. You get to race with dozens of p
 
 - scoring is obscure
 - competitions are expensive
-- weather has influence
+- weather plays an important part
 
 The goal of Syrac is to propose an alternative to regular paragliding competitions by solving these issues.
 
