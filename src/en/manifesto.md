@@ -6,7 +6,7 @@ Paragliding competitions are incredible events. You get to race with dozens of p
 - competitions are expensive
 - weather plays an important part
 
-The goal of Syrac is to propose an alternative to regular paragliding competitions by solving these issues.
+The goal of Syrac is to offer an alternative to regular paragliding competitions by proposing solutions to these issues.
 
 ## Scoring
 
@@ -20,7 +20,7 @@ Syrac addresses this issue by coming back to the essence of racing: time. The on
 
 ## Cost
 
-Paragliding is an expensive sport. Equipment constitutes a significant budget, and has to be changed fairly often. Local competitions are fairly affordable, but international competitions often involves long-haul flights, hotel bookings, logistics costs as well as registration fees.
+Paragliding is an expensive sport. Equipment constitutes a significant budget, and has to be renewed fairly often. Local competitions are fairly affordable, but international competitions often involve long-haul flights, hotel bookings, logistics costs as well as registration fees.
 This cost of entry restricts high-level competition access to relatively wealthy pilots.
 
 Syrac is free. Use it, give us your feedback, and we can make it better together. Everyone is welcome.
