@@ -27,4 +27,4 @@ Cheating users will first receive a warning, and then be permanently banned from
 * submitting a flight track which is not yours
 * submitting a forged IGC file
 
-[1]: https://github.com/syrac-org/syrac-org.github.io/issues/new?template=rules.md&title=Rules+issue
+[1]: https://github.com/syrac-org/syrac-docs/issues/new?template=rules.md&title=Rules+issue

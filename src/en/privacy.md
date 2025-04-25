@@ -169,4 +169,4 @@ If you have any questions about this Privacy Policy, You can contact us:
 
 - By email: hello *at* <!-- go away, bot --> syrac *dot* org
 
-- By [opening an issue on GitHub](https://github.com/syrac-org/syrac-org.github.io/issues/new)
+- By [opening an issue on GitHub](https://github.com/syrac-org/syrac-docs/issues/new)
