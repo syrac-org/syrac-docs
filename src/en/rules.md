@@ -23,10 +23,11 @@ As soon as someone (including you) completes a given task, it becomes part Syrac
 
 If you were the first one to complete a task which was deleted, feel free to re-create the task yourself and submit your track.
 
-## Flight
+## Flights
 
 Everyone can submit attempts for all tasks, without limits.
-You can submit multiple attempts to the same task (or different ones) during the same day. Tracks should be submitted as IGC files with a valid signature.
+You can submit multiple attempts to the same task (or different ones) during the same day.
+Tracks should be submitted as IGC files with a valid signature.
 
 ## Cheating
 
