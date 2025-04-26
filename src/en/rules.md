@@ -3,7 +3,9 @@
 Syrac is designed to have a few simple rules, which are described here.
 If you think some of these rules are not fair or could be improved, feel free to [suggest a change][1].
 
-## Task
+## Tasks
+
+### Creating tasks
 
 Everyone can create tasks using either built-in XCTrack features or third-party tools. There are some restrictions regarding the tasks that can be submitted:
 
@@ -13,6 +15,13 @@ Everyone can create tasks using either built-in XCTrack features or third-party 
 - optimized task distance between SSS and ESS must be between 5km and 500km
 
 In order to prevent spam, free users can create a maximum of 10 tasks per 24-hour window.
+
+### Deleting tasks
+
+You can only delete the tasks you created, and which have not been completed yet.
+As soon as someone (including you) completes a given task, it becomes part Syrac's permanent task pool.
+
+If you were the first one to complete a task which was deleted, feel free to re-create the task yourself and submit your track.
 
 ## Flight
 
