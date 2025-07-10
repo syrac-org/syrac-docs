@@ -9,6 +9,8 @@ If you think some of these rules are not fair or could be improved, feel free to
 
 Everyone can create tasks using either built-in XCTrack features or third-party tools. There are some restrictions regarding the tasks that can be submitted:
 
+- tasks should be submitted in [XCTrack format][2]
+- tasks should be of type `ELAPSED-TIME`
 - tasks must have a Start of Speed Section (SSS) and an End of Speed Section (ESS)
 - tasks must have between 0 and 20 turnpoints, excluding SSS and ESS
 - turnpoint radius must be between 100m and 100km
@@ -37,4 +39,5 @@ Cheating users will first receive a warning, and then be permanently banned from
 * submitting a flight track which is not yours
 * submitting a forged IGC file
 
-[1]: https://github.com/syrac-org/syrac-docs/issues/new?template=rules.md&title=Rules+issue
+[1]: https://github.com/orgs/syrac-org/discussions/new?category=ideas
+[2]: https://xctrack.org/Competition_Interfaces.html
