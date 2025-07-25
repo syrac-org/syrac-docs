@@ -25,6 +25,9 @@ As soon as someone (including you) completes a given task, it becomes part Syrac
 
 If you were the first one to complete a task which was deleted, feel free to re-create the task yourself and submit your track.
 
+If you wish to request the deletion of a completed task, or the update of task metadata, please [request a manual change][3].
+Make sure to include a link to the task as well as a clear explanation of the requested changes.
+
 ## Flights
 
 Everyone can submit attempts for all tasks, without limits.
@@ -41,3 +44,4 @@ Cheating users will first receive a warning, and then be permanently banned from
 
 [1]: https://github.com/orgs/syrac-org/discussions/new?category=ideas
 [2]: https://xctrack.org/Competition_Interfaces.html
+[3]: https://github.com/orgs/syrac-org/discussions/new?category=change-requests
