@@ -10,4 +10,4 @@ Please add the following model to the list of gliders.
 
 Glider brand:
 Glider model:
-Link to model on manufacturer website: 
+Link to model on manufacturer website:
