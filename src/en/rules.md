@@ -31,6 +31,7 @@ Make sure to include a link to the task as well as a clear explanation of the re
 ## Flights
 
 Everyone can submit attempts for all tasks, without limits.
+Only submit your own tracks, they are tied to your user account.
 You can submit multiple attempts to the same task (or different ones) during the same day.
 Tracks should be submitted as IGC files with a valid signature.
 
