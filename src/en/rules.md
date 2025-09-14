@@ -12,7 +12,7 @@ Everyone can create tasks using either built-in XCTrack features or third-party 
 - tasks should be submitted in [XCTrack format][2]
 - tasks should be of type `ELAPSED-TIME`
 - tasks must have a Start of Speed Section (SSS) and an End of Speed Section (ESS)
-- tasks must have between 0 and 20 turnpoints, excluding SSS and ESS
+- tasks must have between 0 and 20 turnpoints, including SSS and ESS
 - turnpoint radius must be between 100m and 100km
 - optimized task distance between SSS and ESS must be between 5km and 500km
 
