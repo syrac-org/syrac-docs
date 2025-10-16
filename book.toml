@@ -10,3 +10,5 @@ create-missing = false
 
 [output.html]
 additional-js = ["theme/appbutton.js"]
+default-theme = "light"
+preferred-dark-theme = "ayu"
