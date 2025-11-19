@@ -1,6 +1,6 @@
 # Introduction
 
-[![Banner image](https://app.syrac.org/banner.png "Syrac")](https://syrac.org/)
+[![Banner image](https://syrac.org/banner.png "Syrac")](https://syrac.org/)
 
 [Syrac](https://syrac.org/) is a paragliding time attack platform.
 It allows you to race on permanent tasks and try to climb to the top of its leaderboard.
